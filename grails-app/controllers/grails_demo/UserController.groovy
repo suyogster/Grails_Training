@@ -7,6 +7,8 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class UserController {
 
+    def scaffold = true;
+
     def login(){
         println params
 
@@ -14,9 +16,12 @@ class UserController {
         def pwd = params.password
 
         if(uN.toString().equalsIgnoreCase("suyog") && pwd.toString().equalsIgnoreCase("suyog")){
-            redirect(controller: 'test')
-//            redirect(action: "welcome")
+            redirect('action':'index')
         }
+    }
+
+    def home(){
+//        redirect('action':'home')
     }
 
 /*    def welcome(){

@@ -1,7 +1,6 @@
 <%@ page import="grails_demo.User" %>
 
 
-
 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'userName', 'error')} required">
 	<label for="userName">
 		<g:message code="user.userName.label" default="User Name" />
